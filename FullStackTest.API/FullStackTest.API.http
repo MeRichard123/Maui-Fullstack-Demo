@@ -1,0 +1,41 @@
+@FullStackTest.API_HostAddress = http://localhost:5141
+
+GET {{FullStackTest.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{FullStackTest.API_HostAddress}}/api/pizza/
+Accept: application/json
+
+###
+
+GET {{FullStackTest.API_HostAddress}}/api/pizza/3
+Accept: application/json
+
+###
+
+POST {{FullStackTest.API_HostAddress}}/api/pizza/
+Content-Type: application/json
+
+{
+  "name": "Hawaii",
+  "isGlutenFree": false
+}
+
+###
+
+DELETE {{FullStackTest.API_HostAddress}}/api/pizza/3
+
+###
+
+PUT {{FullStackTest.API_HostAddress}}/api/pizza/3
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "Hawaiian",
+  "isGlutenFree": false
+}
+
+###
